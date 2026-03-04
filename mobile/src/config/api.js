@@ -6,7 +6,7 @@
 import { Platform } from 'react-native';
 
 // Set your deployed backend URL here (e.g. 'https://wedding-billing.onrender.com/api') or null for local
-const DEPLOYED_API_URL = null;
+const DEPLOYED_API_URL = 'https://wedding-billing-api.onrender.com/api';
 
 const getApiBase = () => {
   if (DEPLOYED_API_URL) {
