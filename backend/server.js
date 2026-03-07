@@ -10,10 +10,13 @@ const app = express();
 connectDB();
 
 app.use(cors({
-  origin: ['http://localhost:8081', 'https://billing-app-7nrd.onrender.com'],
-  methods: ['GET','POST','PUT','DELETE'],
+  origin: true,
+  methods: ['GET','POST','PUT','DELETE','OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true
 }));
+
+app.options('*', cors());
 
 app.use(express.json());
 
