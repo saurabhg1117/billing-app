@@ -10,7 +10,7 @@ const app = express();
 connectDB();
 
 app.use(cors({
-  origin: ['http://localhost:8081', 'https://wedding-billing-api.onrender.com'],
+  origin: ['http://localhost:8081', 'https://billing-app-7nrd.onrender.com'],
   methods: ['GET','POST','PUT','DELETE'],
   credentials: true
 }));
