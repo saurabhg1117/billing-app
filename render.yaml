@@ -2,6 +2,7 @@ services:
   - type: web
     name: wedding-billing-api
     runtime: node
+    plan: free
     rootDir: backend
 
     buildCommand: npm install

@@ -4,3 +4,4 @@ node_modules/
 .expo/
 dist/
 .cache/
+QUICK_SETUP.md
