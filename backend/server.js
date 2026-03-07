@@ -9,7 +9,12 @@ const app = express();
 
 connectDB();
 
-app.use(cors());
+app.use(cors({
+  origin: ['http://localhost:8081', 'https://wedding-billing-api.onrender.com'],
+  methods: ['GET','POST','PUT','DELETE'],
+  credentials: true
+}));
+
 app.use(express.json());
 
 app.use('/api/bills', billRoutes);
@@ -24,6 +29,7 @@ app.use((err, req, res, next) => {
 });
 
 const PORT = process.env.PORT || 5000;
+
 app.listen(PORT, '0.0.0.0', () => {
-  console.log(`Server running on http://localhost:${PORT} (also reachable via your machine's IP)`);
+  console.log(`Server running on port ${PORT}`);
 });
